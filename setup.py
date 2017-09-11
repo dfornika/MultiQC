@@ -90,6 +90,7 @@ setup(
             'htseq = multiqc.modules.htseq:MultiqcModule',
             'jellyfish = multiqc.modules.jellyfish:MultiqcModule',
             'kallisto = multiqc.modules.kallisto:MultiqcModule',
+            'kraken = multiqc.modules.kraken:MultiqcModule',
             'leehom = multiqc.modules.leehom:MultiqcModule',
             'macs2 = multiqc.modules.macs2:MultiqcModule',
             'methylQA = multiqc.modules.methylQA:MultiqcModule',
