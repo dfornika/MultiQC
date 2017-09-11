@@ -91,7 +91,7 @@ kallisto:
     contents: '[quant] finding pseudoalignments for the reads'
     shared: true
 kraken/report:
-    contents_re: '^ {1,2}\d{1,2}\.\d{1,2}\t\d+\t\d+\t[UDKPCOFGS-]\t\d+\t.+$$'
+    contents_re: '^ {1,2}\d{1,2}\.\d{1,2}\t\d+\t\d+\t[UDKPCOFGS-]\t\d+\t.*'
 leehom:
     contents: 'Adapter dimers/chimeras'
     shared: true
