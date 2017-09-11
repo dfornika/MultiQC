@@ -90,6 +90,8 @@ jellyfish:
 kallisto:
     contents: '[quant] finding pseudoalignments for the reads'
     shared: true
+kraken/report:
+    contents_re: '^ {1,2}\d{1,2}\.\d{1,2}\t\d+\t\d+\tU\t0\tunclassified$'
 leehom:
     contents: 'Adapter dimers/chimeras'
     shared: true
