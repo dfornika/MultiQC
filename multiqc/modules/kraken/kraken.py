@@ -46,8 +46,9 @@ class MultiqcModule(BaseMultiqcModule):
             species_name = line[5].lstrip(' ')
             data[species_name] = percentage_reads_clade
 
-        #sanity check
-
+        # sanity check
+        # TODO
+        return data
 
     def plot(self):
         """ Generate the plot """
