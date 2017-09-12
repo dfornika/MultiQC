@@ -44,7 +44,8 @@ class MultiqcModule(BaseMultiqcModule):
             rank_code = line[3]
             ncbi_taxonomy_id = line[4]
             species_name = line[5].lstrip(' ')
-            data[species_name] = percentage_reads_clade
+            data[species_name['NCBI Taxonomy ID']] = ncbi_taxonomy_id
+            data[species_name['Percent Reads in Clade']] = percentage_reads_clade
 
         # sanity check
         # TODO
