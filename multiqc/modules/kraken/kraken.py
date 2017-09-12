@@ -22,7 +22,7 @@ class MultiqcModule(BaseMultiqcModule):
         self.kraken_report_data  = dict()
         
         for f in self.find_log_files('kraken/report', filehandles=True):
-            kraken_report_data[f.name] = parse_kraken_report(f)
+            kraken_report_data[f.name] = self.parse_kraken_report(f)
 
         if len(self.kraken_report_data) == 0:
             log.debug("Could not find any data in {}".format(config.analysis_dir))
