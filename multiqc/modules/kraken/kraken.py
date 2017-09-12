@@ -19,7 +19,7 @@ class MultiqcModule(BaseMultiqcModule):
         href="http://ccb.jhu.edu/software/kraken/",
         info="a system for assigning taxonomic labels to short DNA sequences.")
 
-        self.kraken_report_data  = dict()
+        self.kraken_report_data  = {}
         
         for f in self.find_log_files('kraken/report', filehandles=True):
             self.kraken_report_data[f['s_name']] = self.parse_kraken_report(f)
@@ -44,6 +44,7 @@ class MultiqcModule(BaseMultiqcModule):
             rank_code = line[3]
             ncbi_taxonomy_id = line[4]
             species_name = line[5].lstrip(' ')
+            data[species_name] = {}
             data[species_name]['NCBI Taxonomy ID'] = ncbi_taxonomy_id
             data[species_name]['Percent Reads in Clade'] = percentage_reads_clade
 
